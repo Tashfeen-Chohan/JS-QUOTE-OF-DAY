@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #bbc6fa;
+}
+
+.quoteBox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 700px;
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 10px 20px 0px rgba(0, 0, 0, 0.15);
+}
+
+.quoteBox h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.quoteBox blockquote {
+  margin-top: 30px;
+  font-size: 26px;
+  min-height: 110px;
+}
+
+.quoteBox blockquote::before,
+.quoteBox blockquote::after {
+  content: '"';
+}
+
+.quoteBox span {
+  position: relative;
+  float: right;
+  margin-top: 10px;
+  display: block;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.quoteBox span::before {
+  position: absolute;
+  top: 50%;
+  left: -40%;
+  height: 2px;
+  width: 20px;
+  background-color: rgb(23, 124, 229);
+  content: "";
+}
+
+.quoteBox div {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.quoteBox button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(23, 124, 229);
+  color: #fff;
+  height: 40px;
+  width: 120px;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 7px;
+  border: 2px solid rgb(23, 124, 229);
+  font-size: 17px;
+}
+
+.quoteBox button i {
+  /* width: 30px; */
+  font-size: 17px;
+  margin-right: 10px;
+  color: rgb(23, 124, 229);
+}
+
+.quoteBox button:nth-child(2) {
+  background-color: transparent;
+  /* color: #333; */
+  color: rgb(23, 124, 229);
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .quoteBox {
+    width: 90%;
+  }
+}
